@@ -1,8 +1,11 @@
 const express = require("express");
-const dotenv = require("dotenv")
+const dotenv = require("dotenv");
+const connectToDatabase = require("./DB/DB.JS");
 dotenv.config();
 
 const app = express();
+
+connectToDatabase();
 
 const PORT = process.env.PORT;
 
